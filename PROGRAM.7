@@ -1,0 +1,25 @@
+//PROGRAM TO FIND TARGET ELEMENT IN ARRAY//
+#include<stdio.h>
+int main()
+{
+    int a[10],target,i,n,search=0;
+    printf("enter the no of elements in the array");
+    scanf("%d",&n);
+    printf("enter the elements of array");
+    for(i=0;i<n;i++) {
+        scanf("%d",&a[i]);
+    }
+    printf("enter element to be searched");
+    scanf("%d",&target);
+    for(i=0;i<n;i++){
+     if(a[i]==target)
+   {
+    printf("element found at %d position",i);
+    search=1;
+    break;
+    }
+    }
+    if(!search) {
+        printf("element not found in the array");
+    }
+}
