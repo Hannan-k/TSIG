@@ -1,0 +1,19 @@
+//FIBONACCI SERIES W/O RECURSION//
+#include <stdio.h>
+int main() {
+    int n, first = 0, second = 1, sum;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci series up to %d terms:\n", n);
+    for (int i = 0; i < n; i++) {
+        if (i <= 1) {
+            sum = i;
+        } else {
+            sum = first + second;
+            first = second;
+            second = sum;
+        }
+        printf("%d ", sum);
+    }
+    return 0;
+}
